@@ -1,0 +1,105 @@
+/* boilerplate styles from... */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+/* HTML5 Boilerplate */
+
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 0;*/
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+html, body{
+	width:100%;
+	height:100%;
+}
+
+label,input{
+	font-size:3em;
+	margin:1em;
+}
+
+label{
+	margin:1em .2em;
+}
+
+.fretboard{
+	position:relative;
+	width:100%;	
+	height:180px;
+	/*background:#333333;*/
+}
+
+.note{
+	position:absolute;
+	/*background:#333333;*/
+	height:30px;
+	/*border:1px solid #aaaaaa;*/
+	box-sizing:border-box;
+	color:#369;
+	/*-webkit-transform:translateZ(1px);*/
+}
+
+.fret{
+	position:absolute;
+	height:100%;
+	background:#333333;	
+	border-right:3px solid #676767;
+	box-sizing:border-box;
+}
+
+.fret[data-fret="0"], .note[data-fret="0"]{
+	background:transparent;
+}
+
+.fret[data-fret="3"]:after, .fret[data-fret="5"]:after, .fret[data-fret="7"]:after, .fret[data-fret="9"]:after, .fret[data-fret="12"]:after,
+.fret[data-fret="15"]:after, .fret[data-fret="17"]:after, .fret[data-fret="19"]:after, .fret[data-fret="21"]:after{
+	position:absolute;
+	content:"";
+	width:4px;
+	height:4px;
+	border-radius:2px;
+	margin:-2px 0 0 -2px;
+	background:#aaaaaa;
+	top:50%;
+	left:50%;
+}
+
+.string{
+	position:absolute;
+	width:100%;
+	height:2px;
+	margin-top:15px;
+	background:#cc9500;
+}
+
+.note.active{
+	z-index:100;
+}
+
+.note.active:after{
+	position:absolute;
+	content:"";
+	width:12px;
+	height:12px;
+	border-radius:6px;
+	margin:-6px 0 0 -6px;
+	background:#33aa11;
+	top:50%;
+	left:50%;
+}
+
+.note[data-fret="0"].active:after{
+	position:absolute;
+	content:"";
+	width:12px;
+	height:12px;
+	border-radius:6px;
+	margin:-6px 0 0 -6px;
+	box-sizing:border-box;
+	background:transparent;
+	border:2px solid #000000;
+	top:50%;
+	left:50%;
+}

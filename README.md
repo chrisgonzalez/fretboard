@@ -1,0 +1,1 @@
+This is a tiny experiment for exploring intervals on the fretboard. Right now, the input field takes comma-separated half-step intervals. So for a major chord: 0, 5, 7 (1,3,5 of the major scale). A 7 chord would be 0,5,7,10 etc.
